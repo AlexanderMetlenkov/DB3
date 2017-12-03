@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class testpackage.TestClass</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class testpackage.TestClass</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/testpackage.html">testpackage</a> &gt; TestClass</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">14</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">14</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.006s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="task3aIsCorrect"></a>
+<h3 class="failures">task3aIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3bIsCorrect"></a>
+<h3 class="failures">task3bIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3cIsCorrect"></a>
+<h3 class="failures">task3cIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3dIsCorrect"></a>
+<h3 class="failures">task3dIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3eIsCorrect"></a>
+<h3 class="failures">task3eIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3fIsCorrect"></a>
+<h3 class="failures">task3fIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3gIsCorrect"></a>
+<h3 class="failures">task3gIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3hIsCorrect"></a>
+<h3 class="failures">task3hIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task3jIsCorrect"></a>
+<h3 class="failures">task3jIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task4aIsCorrect"></a>
+<h3 class="failures">task4aIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task4bIsCorrect"></a>
+<h3 class="failures">task4bIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task4cIsCorrect"></a>
+<h3 class="failures">task4cIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task4dIsCorrect"></a>
+<h3 class="failures">task4dIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="task4iIsCorrect"></a>
+<h3 class="failures">task4iIsCorrect</h3>
+<span class="code">
+<pre>org.neo4j.driver.v1.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:132)
+	at org.neo4j.driver.internal.net.SocketConnection.startSocketClient(SocketConnection.java:92)
+	at org.neo4j.driver.internal.net.SocketConnection.&lt;init&gt;(SocketConnection.java:67)
+	at org.neo4j.driver.internal.net.SocketConnector.createConnection(SocketConnector.java:77)
+	at org.neo4j.driver.internal.net.SocketConnector.connect(SocketConnector.java:50)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:216)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool$ConnectionSupplier.get(SocketConnectionPool.java:198)
+	at org.neo4j.driver.internal.net.pooling.BlockingPooledConnectionQueue.acquire(BlockingPooledConnectionQueue.java:96)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquireConnection(SocketConnectionPool.java:149)
+	at org.neo4j.driver.internal.net.pooling.SocketConnectionPool.acquire(SocketConnectionPool.java:76)
+	at org.neo4j.driver.internal.DirectConnectionProvider.acquireConnection(DirectConnectionProvider.java:47)
+	at org.neo4j.driver.internal.DirectConnectionProvider.verifyConnectivity(DirectConnectionProvider.java:67)
+	at org.neo4j.driver.internal.DirectConnectionProvider.&lt;init&gt;(DirectConnectionProvider.java:41)
+	at org.neo4j.driver.internal.DriverFactory.createDirectDriver(DriverFactory.java:109)
+	at org.neo4j.driver.internal.DriverFactory.createDriver(DriverFactory.java:93)
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:67)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:135)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:117)
+	at org.neo4j.driver.v1.GraphDatabase.driver(GraphDatabase.java:92)
+	at packagewithmainclass.Lab3_main.&lt;init&gt;(Lab3_main.java:14)
+	at testpackage.TestClass.&lt;init&gt;(TestClass.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:187)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:236)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:233)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:111)
+	at org.neo4j.driver.internal.net.ChannelFactory.connect(ChannelFactory.java:79)
+	at org.neo4j.driver.internal.net.ChannelFactory.create(ChannelFactory.java:41)
+	at org.neo4j.driver.internal.net.SocketClient.start(SocketClient.java:126)
+	... 64 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">task3aIsCorrect</td>
+<td>0.005s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3bIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3cIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3dIsCorrect</td>
+<td>0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3eIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3fIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3gIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3hIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task3jIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task4aIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task4bIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task4cIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task4dIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">task4iIsCorrect</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 3.5-rc-2</a> at 03.12.2017 21:59:02</p>
+</div>
+</div>
+</body>
+</html>
